@@ -1,0 +1,5 @@
+This files contains basic information about the game classes.
+
+Warrior : 10 HP, 0 MP, 20 Strength
+Wizard : 8 HP, 20 MP, 10 Strength
+Undead : 5 HP, 20 MP, 15 Strength
