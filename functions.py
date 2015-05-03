@@ -1,0 +1,3 @@
+def combat(enemy):
+    
+    

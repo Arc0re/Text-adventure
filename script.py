@@ -31,7 +31,7 @@ def start():
             print "Can't you read?"
 
 
-    print "(\n That was a joke, for the 'case sensitive' thing. Lol.)"
+    print "\n(That was a joke, for the 'case sensitive' thing. Lol.)"
     print "Nice. Now that we now that you are a %s, more or less, lets go on. If you want to see your class's skills, just open the classes.txt file located on the same folder.\n" %variables.skill
 
     return
@@ -52,10 +52,39 @@ def game_loop():
     while loop == 2:
         print "You enter in a dark room, where the air smell like a dead body. A great library covers an entire wall. There is a table and a door."
         second = raw_input("What do you do?")
+        
         if second.lower() == ("go to table") or second.lower() == ("table"):
             print "On the table, you see an open book which title is 'Necronomicon'. Next to it, you see a weird stick."
-            table = raw_input("What do you do?"):
-            if table.lower() == 
+            table = raw_input("What do you do?")
+            
+            if table.lower() == ("take book"):
+                print "You put the book in your bag."
+                variables.inventory.append("necronomicon")
+                loop = 2
+            elif table.lower() == ("take stick") or table.lower() == ("take weird stick"):
+                print "You put the stick in your inventory. A strange glow is emanating from one extremity..."
+                variables.inventory.append("magic staff")
+                
+                if variables.skill == "wizard" or variables.skill == "undead":
+                    equip = raw_input("Do you want to equip the staff to use it as a weapon? Answer by 'yes' or 'no', that shouldn't be too hard.")
+                    if equip.lower() == ("yes"):
+                        variables.equipped_weapon = "staff"
+                        print "You have equipped the staff."
+                    elif equip.lower() == ("no"):
+                        print "You don't want to fight ? Fine..."
+                        loop = 2
+                    else:
+                        print "I don't know that command..."
+                        loop = 2
+                        
+                else:
+                    print "Huh, it looks like you cannot equip that. Too bad..."
+                    loop = 2
+
+            loop = 2
+
+       #  elif second.lower() == ("library") or second.lower()== ("go to librairy"):
+             
 
             
     

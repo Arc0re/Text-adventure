@@ -1,0 +1,4 @@
+#List of all the ideas
+- Make a combat function
+- A game over one ?
+- a way to call the inventory from anywhere and display its content
